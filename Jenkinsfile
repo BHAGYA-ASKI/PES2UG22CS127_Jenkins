@@ -4,26 +4,30 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'g++ program.cpp -o program.out'
+                script {
+                    sh 'g++ program.cpp -o program.out'
+                }
             }
         }
-        
+
         stage('Test') {
             steps {
-                sh './program.out'
+                script {
+                    sh './program.out'
+                }
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying application...'
+                echo 'Deployment successful!'
             }
         }
     }
 
     post {
         failure {
-            echo 'Pipeline failed!'
+            echo 'Pipeline Failed'
         }
     }
 }
