@@ -1,10 +1,18 @@
-//File: hello.cpp
 #include <iostream>
 using namespace std;
 
-int main(void) {
-  cout << "Hello, World\n";
-  cout << "Hello, Jenkins\n";
-  cout << "I have successfully built and run this  \n";
-  return 0;
+int main() {
+    cout << "=============================\n";
+    cout << "     Jenkins Pipeline Test   \n";
+    cout << "=============================\n";
+
+    cout << "Hello, World!\n";
+    cout << "Hello, Jenkins!\n";
+
+    string name;
+    cout << "Enter your name: ";
+    cin >> name;
+    cout << "Welcome, " << name << "! Your Jenkins build ran successfully. 🚀\n";
+
+    return 0;
 }
